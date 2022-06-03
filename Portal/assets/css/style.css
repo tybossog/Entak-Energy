@@ -1,0 +1,99 @@
+div .spinner-grow-sm{
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+.profilePic {
+   width: 30px;
+   height: 30px;
+ }
+#pagination{
+  background-color: #64c5b1;
+}
+a{
+  text-decoration: none;
+}
+#salesSummary {
+  background: url("/Entak/Portal/assets/img/SalesSummary.jpg");
+  background-size: 1100px 50px;
+  background-repeat: no-repeat;
+  background-color: #f3f4f3;
+}
+#customersSummary{
+  background-color: #f3f4f3;
+}
+#revenue,#sales,#transaction,#news,#account,
+#offtakersInv,#tenantInv{
+  background-color: #ffffff;
+}
+.fs-small{
+  font-size: 0.7rem!important;
+  color: #c2e6df;
+}
+#mySales,#myPlot{
+  width: 100%;
+  max-width:720px
+}
+hr{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.total_blance,.badge_btn_5{
+  background-color: #e5fff3;
+}
+/* The sidebar menu */
+#sideBar {
+
+}
+
+/*--------------------------------------------------------------
+# Profile Page
+--------------------------------------------------------------*/
+.profile .profile-card img {
+  max-width: 120px;
+}
+.profile .profile-card h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2c384e;
+  margin: 10px 0 0 0;
+}
+.profile .profile-card h3 {
+  font-size: 18px;
+}
+.profile .profile-card .social-links a {
+  font-size: 20px;
+  display: inline-block;
+  color: rgba(1, 41, 112, 0.5);
+  line-height: 0;
+  margin-right: 10px;
+  transition: 0.3s;
+}
+.profile .profile-card .social-links a:hover {
+  color: #012970;
+}
+.profile .profile-overview .row {
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+.profile .profile-overview .card-title {
+  color: #012970;
+}
+.profile .profile-overview .label {
+  font-weight: 600;
+  color: rgba(1, 41, 112, 0.6);
+}
+.profile .profile-edit label {
+  font-weight: 600;
+  color: rgba(1, 41, 112, 0.6);
+}
+.profile .profile-edit img {
+  max-width: 120px;
+}
+ .nav-tabs .nav-link.active {
+    color: #3a786c !important;
+    border-color: #ffffff #ffffff #64c5b1;
+}
+.nav-link{
+  color: #495057;
+}

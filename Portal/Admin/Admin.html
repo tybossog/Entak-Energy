@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Portal</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <!-- Template Main CSS File -->
+    <link href="/Entak/Portal/assets/css/style.css" rel="stylesheet">
+
+    <script src="/Entak/assets/vendor/jquery/jquery-3.6.0.js"></script>
+    <!-- Template Main JS File -->
+  </head>
+  <body id="mainBody">
+
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-2" id="sideBar">
+          <div class="vstack mt-3 gap-3">
+            <p class="text-success display-4">Entak</p>
+            <div class="accordion accordion-flush" id="sideBarMenu">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="dashboardMenu">
+                  <button type="button"
+                  class=" btn text-success accordion-button collapsed"
+                  data-bs-toggle="collapse" data-bs-target="#dashboardSubMenu">
+                    <div class="d-flex justify-content-start">
+                      <i class="bi bi-house"></i>
+                      <span  class=" mx-3 ">
+                        Dashboard
+                      </span>
+                    </div>
+                  </button>
+                </h2>
+                <div id="dashboardSubMenu" class="accordion-collapse collapse"
+                data-bs-parent="#sideBarMenu">
+                  <div class="accordion-body">
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="salesMenu">
+                  <button type="button"
+                  class="btn text-success accordion-button collapsed"
+                  data-bs-toggle="collapse" data-bs-target="#salesSubMenu">
+                   <div class="d-flex justify-content-start">
+                    <i class=" bi bi-cash-coin"></i>
+                    <span  class="mx-3">
+                      Sales
+                    </span>
+                   </div>
+                  </button>
+                </h2>
+                <div id="salesSubMenu" class="accordion-collapse collapse"
+                data-bs-parent="#sideBarMenu">
+                  <div class="accordion-body">
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="invoiceMenu">
+                  <button type="button"
+                  class="btn accordion-button collapsed text-success"
+                  data-bs-toggle="collapse" data-bs-target="#invoiceSubMenu">
+                   <div class="d-flex justify-content-start">
+                    <i class=" bi bi-receipt"></i>
+                    <span  class="mx-3">
+                      Invoice
+                    </span>
+                   </div>
+                  </button>
+                </h2>
+                <div id="invoiceSubMenu" class="accordion-collapse collapse"
+                 data-bs-parent="#sideBarMenu">
+                  <div class="accordion-body">
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="customersMenu">
+                  <button type="button"
+                   class="btn accordion-button collapsed text-success"
+                   data-bs-toggle="collapse" data-bs-target="#customersSubMenu">
+                    <div class="d-flex justify-content-start">
+                    <i class="bi bi-people"></i>
+                    <span  class="mx-3">
+                      Customers
+                    </span>
+                    </div>
+                  </button>
+                </h2>
+                <div id="customersSubMenu" class="accordion-collapse collapse"
+                data-bs-parent="#sideBarMenu">
+                  <div class="accordion-body">
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="meterMenu">
+                  <button type="button"
+                   class="btn accordion-button collapsed text-success"
+                   data-bs-toggle="collapse" data-bs-target="#meterSubMenu">
+                    <div class="d-flex justify-content-start">
+                      <i class="bi bi-speedometer"></i>
+                      <span  class=" mx-3  ">
+                        Smart Meter
+                      </span>
+                    </div>
+                  </button>
+                </h2>
+                <div id="meterSubMenu" class="accordion-collapse collapse"
+                data-bs-parent="#sideBarMenu">
+                  <div class="accordion-body">
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flutterwaveMenu">
+                  <button type="button"
+                   class="btn accordion-button collapsed text-success"
+                   data-bs-toggle="collapse" data-bs-target="#flutterwaveSubMenu">
+                    <div class="d-flex justify-content-start">
+                      <i class="bi bi-bank"></i>
+                      <span  class="mx-3">
+                        Flutterwave
+                      </span>
+                    </div>
+                  </button>
+                </h2>
+                <div id="flutterwaveSubMenu" class="accordion-collapse collapse"
+                data-bs-parent="#sideBarMenu">
+                  <div class="accordion-body">
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="profileMenu">
+                  <button type="button"
+                   class="btn accordion-button collapsed text-success"
+                   data-bs-toggle="collapse" data-bs-target="#profileSubMenu">
+                    <div class="d-flex justify-content-start">
+                      <i class="bi bi-person"></i>
+                      <span  class=" mx-3 ">
+                        Profile
+                      </span>
+                    </div>
+                  </button>
+                </h2>
+                <div id="profileSubMenu" class="accordion-collapse collapse"
+                data-bs-parent="#sideBarMenu">
+                  <div class="accordion-body">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-10" id="mainContent">
+
+          <div id="head" class="d-flex justify-content-between p-2 my-3">
+            <form class=" d-flex p-2">
+              <div class="input-group input-group-sm">
+                <button class="btn input-group-text border-success border-0"
+                type="submit"><i class="bi bi-search"></i></button>
+                <input type="text" class="form-control border-success ps-3
+                rounded-pill" placeholder="Search here.." aria-label="Username"
+                aria-describedby="">
+              </div>
+            </form>
+
+              <div class=" d-flex p-2">
+                <div class="align-self-center me-2">
+                  <p class="badge mb-0 p-2 rounded-pill bg-dark">
+                    <span class="text-success">Gas Price</span> : $<span>50</span>/kg
+                  </p>
+                </div>
+                <button type="button" class="btn align-self-end position-relative me-2">
+                  <i class="bi h5 bi-bell"></i>
+                  <div class="position-absolute top-0 start-75 p-2 spinner-grow
+                  spinner-grow-sm text-success"  style="width: 0.5rem; height: 0.5rem;">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                </button>
+                <button type="button" class="btn align-self-end position-relative me-2">
+                  <i class="bi h5 bi-envelope"></i>
+                  <div class="position-absolute top-0 start-75 p-2 spinner-grow
+                  spinner-grow-sm text-success"  style="width: 0.5rem; height: 0.5rem;">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                </button>
+                <div class="align-self-center">
+                  <i class="bi bi-person-circle h3"></i>
+                </div>
+              </div>
+          </div>
+
+          <div class="d-flex justify-content-between  p-3" id="pagination">
+            <div>
+              <p class="display-5 text-light">Dashboard</p>
+              <nav aria-label="breadcrumb ">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item "><a href="#" class="text-light">Home</a></li>
+                  <li class="breadcrumb-item "><a href="#" class="text-light">Library</a></li>
+                  <li class="breadcrumb-item active" aria-current="page" class="">Data</li>
+                </ol>
+              </nav>
+            </div>
+            <div class="d-flex">
+              <button type="button" class=" align-self-center text-secondary
+               h-50 px-3 btn btn-light shadow">Create Report</button>
+            </div>
+          </div>
+
+          <div class="container-fluid" id="salesSummary">
+            <div class="row">
+
+              <div class="col-md-7 mb-3">
+                <div class="shadow d-flex flex-column rounded p-3" id="revenue">
+                      <div class="d-flex w-100 justify-content-between">
+                        <p class="text-secondary">Revenue</p>
+                        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                          <input type="radio" class="btn-check" name="btnradio" id="btnThisWk" autocomplete="off" checked>
+                          <label class="btn btn-light shadow text-secondary" for="btnThisWk">This Week</label>
+
+                          <input type="radio" class="btn-check" name="btnradio" id="btnLastWk" autocomplete="off">
+                          <label class="btn btn-light shadow text-secondary" for="btnLastWk">Last Week</label>
+
+                          <input type="radio" class="btn-check" name="btnradio" id="btnLastMonth" autocomplete="off">
+                          <label class="btn btn-light shadow text-secondary" for="btnLastMonth">Last Month</label>
+                        </div>
+                      </div>
+                      <div id="myPlot"></div>
+                  </div>
+              </div>
+
+              <div class="col-md-4 mb-3  ">
+                <div class="rounded shadow" id="sales">
+                  <div class="d-flex flex-row p-3 w-100 justify-content-between" >
+                      <p class="text-secondary">Total Sales Unit</p>
+                      <button type="button" class="btn rounded-circle btn-light">
+                        <i class="bi bi-three-dots"></i>
+                      </button>
+                    </div>
+                  <div id="mySales" ></div>
+                  <div class="d-flex p-4 justify-content-around rounded-bottom flex-row bg-dark text-light">
+                    <div class="d-flex flex-column">
+                      <p class="fs-small fw-light">This Month Revenue</p>
+                      <p class="fs-4 fw-light">N100K</p>
+                      <div class="d-flex flex-row">
+                        <p class="align-self-center text-success fs-small"><i class="bi bi-arrow-up"></i> 14.5%</p>
+                        <div class="d-flex flex-column">
+                          <p class="fs-small fw-light">Up From Last</p>
+                          <p class="fs-small fw-light">Month</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex flex-column">
+                      <p class="fs-small fw-light">This Month Revenue</p>
+                      <p class="fs-4 fw-light">N100K</p>
+                      <div class="d-flex flex-row">
+                        <p class="align-self-center text-success fs-small"><i class="bi bi-arrow-up"></i> 14.5%</p>
+                        <div class="d-flex flex-column">
+                          <p class="fs-small fw-light">Up From Last</p>
+                          <p class="fs-small fw-light">Month</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4 mb-3 ">
+                <div class="rounded shadow" id="transaction">
+                  <div class="d-flex flex-column p-3" >
+                    <div class="d-flex w-100 ps-3 justify-content-between">
+                      <p class="text-secondary">Transactions</p>
+                      <button type="button" class="btn rounded-circle btn-light">
+                        <i class="bi bi-three-dots"></i></button>
+                    </div>
+                  </div>
+                  <div class="d-flex flex-column p-3 ">
+                     <div class="d-flex justify-content-around flex-row">
+                       <p class="align-self-center"><i class="bi text-success bi-cash-stack"></i></p>
+                       <div class="d-flex justify-content-center flex-column">
+                         <p class="mb-1">Maintainance Bill</p>
+                         <p class="fs-small text-center text-secondary">10 Aug 03:00PM </p>
+                       </div>
+                       <p class="text-danger align-self-center fw-light">- N 10,000.00</p>
+                     </div>
+                     <hr>
+                     <div class="d-flex justify-content-around flex-row">
+                       <p class="align-self-center"><i class="bi text-success bi-cash-stack"></i></p>
+                       <div class="d-flex justify-content-center flex-column">
+                         <p class="mb-1">Offtakers Bill</p>
+                         <p class="fs-small text-center text-secondary">10 Aug 03:00PM </p>
+                       </div>
+                       <p class="text-danger align-self-center fw-light">- N 55,000.00</p>
+                     </div>
+                     <hr>
+                     <div class="d-flex justify-content-around flex-row">
+                       <p class="align-self-center"><i class="bi text-success bi-cash-stack"></i></p>
+                       <div class="d-flex justify-content-center flex-column">
+                         <p class="mb-1">Logistics Bill</p>
+                         <p class="fs-small text-center text-secondary">10 Aug 03:00PM </p>
+                       </div>
+                       <p class="text-success align-self-center fw-light"> N 12,000.00</p>
+                     </div>
+                     <hr>
+                     <div class="d-flex justify-content-around flex-row">
+                       <p class="align-self-center"><i class="bi text-success bi-cash-stack"></i></p>
+                       <div class="d-flex justify-content-center flex-column">
+                         <p class="mb-1">Tenants Bill</p>
+                         <p class="fs-small text-center text-secondary">10 Aug 03:00PM </p>
+                       </div>
+                       <p class="text-success align-self-center fw-light"> N 65,000.00</p>
+                     </div>
+                   </div>
+                </div>
+              </div>
+
+              <div class="col-md-4 mb-3 ">
+                <div class="rounded shadow" id="news">
+                  <div class="d-flex flex-column p-3" >
+                    <div class="d-flex w-100 ps-3 justify-content-between">
+                      <p class="text-secondary">News & Update</p>
+                      <div class="dropdown">
+                        <button class="btn btn-sm btn-outline-success  dropdown-toggle"
+                         type="button" id="newsDate" data-bs-toggle="dropdown">
+                          Today
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><button class="dropdown-item text-success" type="button">Today</button></li>
+                          <li><button class="dropdown-item text-success" type="button">Tomorrow</button></li>
+                          <li><button class="dropdown-item text-success" type="button">Month</button></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex flex-column p-3 ">
+                    <hr>
+                    <div class="single_update_news pt-2">
+                    <h5 class="text-secondary">36% off For new Consultations.</h5>
+                    <p class="text-secondary fs-small">Sorem Kpsum is simply of the printing..</p>
+                    </div>
+                    <hr>
+                    <div class="single_update_news pt-2">
+                    <h5 class="text-secondary">36% off For new Consultations.</h5>
+                    <p class="text-secondary fs-small">Sorem Kpsum is simply of the printing..</p>
+                    </div>
+                    <hr>
+                    <div class="single_update_news pt-2">
+                    <h5 class="text-secondary">36% off For new Consultations.</h5>
+                    <p class="text-secondary fs-small">Sorem Kpsum is simply of the printing..</p>
+                    </div>
+                    <hr>
+                    <div class="single_update_news pt-2">
+                    <h5 class="text-secondary">36% off For new Consultations.</h5>
+                    <p class="text-secondary fs-small">Sorem Kpsum is simply of the printing..</p>
+                    </div>
+                    <div class="mt-2 d-flex justify-content-center">
+                      <button type="button" class="btn btn-light text-success">
+                        Load More <i class="bi bi-chevron-down text-success"></i>
+                      </button>
+                    </div>
+                   </div>
+                </div>
+              </div>
+
+              <div class="col-md-4 mb-3 ">
+                <div class="rounded shadow" id="account">
+                  <div class="d-flex flex-column p-3" >
+                    <div class="d-flex w-100 ps-3 justify-content-between">
+                      <p class="text-secondary">Account Info</p>
+                      <button type="button" class="btn rounded-circle btn-light">
+                        <i class="bi bi-three-dots"></i></button>
+                    </div>
+                  </div>
+                  <div class="d-flex flex-column p-3 ">
+
+                     <div class="d-flex justify-content-between px-2 flex-row">
+                       <p class="fw-light">Monthly Plan</p>
+                       <p class="text-secondary fw-bold fs-5">N 1000</p>
+                     </div>
+                      <div class="d-flex justify-content-between px-2 flex-row">
+                        <p class="fw-light">Taxes</p>
+                        <p class="text-secondary fw-bold fs-5">N 500</p>
+                      </div>
+                       <div class="d-flex justify-content-between px-2 flex-row">
+                         <p class="fw-light">Miscll</p>
+                         <p class="text-secondary fw-bold fs-5">N 100</p>
+                       </div>
+                       <div class="total_blance rounded shadow p-2 mt-2 mb-1">
+                        <span class="fs-small text-secondary">Total balance</span>
+                        <div class="total_blance_inner d-flex align-items-center flex-wrap justify-content-around">
+                        <div>
+                        <span class="fs-3 fw-bold text-success d-block">$3650</span>
+                        <a class="badge bg-success" href="#">+1235</a>
+                        </div>
+                        <div>
+                        <div><a class="btn btn-danger btn-sm mb-2" href="#">Today</a></div>
+                        <div><a class="btn btn-primary btn-sm" href="#">This week</a></div>
+                        </div>
+                        </div>
+                      </div>
+                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container-fluid" id="smartMeter">
+            <div class="row">
+              <div class="col-md-6" id="meterConfig">
+
+              </div>
+              <div class="col-md-6" id="meterInventory">
+
+              </div>
+            </div>
+          </div>
+
+          <div class="container-fluid" id="customersSummary">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="" id="tenantInv">
+                  <table class="table table-hover p-2 table-responsive
+                   table-borderless rounded shadow">
+                  <thead class="table-success">
+                    <tr>
+                      <th class="text-success text-center">Tenant</th>
+                      <th class="text-success text-center">Meter</th>
+                      <th class="text-success text-center">Invoice</th>
+                      <th class="text-success text-center">Units</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="d-flex justify-content-around">
+                          <p><i class="bi bi-person-circle"></i></p>
+                          <p>Michae k.</p>
+                        </div>
+                      </td>
+                      <td>
+                        <p>AXT44P5</p>
+                      </td>
+                      <td>
+                        <p>#2257GYYH</p>
+                      </td>
+                      <td>
+                        <p>55</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex justify-content-around">
+                          <p><i class="bi bi-person-circle"></i></p>
+                          <p>Michae k.</p>
+                        </div>
+                      </td>
+                      <td>
+                        <p>AXT44P5</p>
+                      </td>
+                      <td>
+                        <p>#2257GYYH</p>
+                      </td>
+                      <td>
+                        <p>55</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex justify-content-around">
+                          <p><i class="bi bi-person-circle"></i></p>
+                          <p>Michae k.</p>
+                        </div>
+                      </td>
+                      <td>
+                        <p>AXT44P5</p>
+                      </td>
+                      <td>
+                        <p>#2257GYYH</p>
+                      </td>
+                      <td>
+                        <p>55</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex justify-content-around">
+                          <p><i class="bi bi-person-circle"></i></p>
+                          <p>Michae k.</p>
+                        </div>
+                      </td>
+                      <td>
+                        <p>AXT44P5</p>
+                      </td>
+                      <td>
+                        <p>#2257GYYH</p>
+                      </td>
+                      <td>
+                        <p>55</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex justify-content-around">
+                          <p><i class="bi bi-person-circle"></i></p>
+                          <p>Michae k.</p>
+                        </div>
+                      </td>
+                      <td>
+                        <p>AXT44P5</p>
+                      </td>
+                      <td>
+                        <p>#2257GYYH</p>
+                      </td>
+                      <td>
+                        <p>55</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex justify-content-around">
+                          <p><i class="bi bi-person-circle"></i></p>
+                          <p>Michae k.</p>
+                        </div>
+                      </td>
+                      <td>
+                        <p>AXT44P5</p>
+                      </td>
+                      <td>
+                        <p>#2257GYYH</p>
+                      </td>
+                      <td>
+                        <p>55</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                </div>
+              </div>
+              <div class="col-md-6" >
+                <div class="" id="offtakersInv">
+                  <table class="table table-hover p-2 table-responsive
+                   table-borderless rounded shadow">
+                  <thead class="table-success">
+                    <tr>
+                      <th class="text-success text-center">Offtaker</th>
+                      <th class="text-success text-center">Meter</th>
+                      <th class="text-success text-center">Invoice</th>
+                      <th class="text-success text-center">Units</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="d-flex justify-content-around">
+                          <p><i class="bi bi-person-circle"></i></p>
+                          <p>Michae k.</p>
+                        </div>
+                      </td>
+                      <td>
+                        <p>AXT44P5</p>
+                      </td>
+                      <td>
+                        <p>#2257GYYH</p>
+                      </td>
+                      <td>
+                        <p>55</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex justify-content-around">
+                          <p><i class="bi bi-person-circle"></i></p>
+                          <p>Michae k.</p>
+                        </div>
+                      </td>
+                      <td>
+                        <p>AXT44P5</p>
+                      </td>
+                      <td>
+                        <p>#2257GYYH</p>
+                      </td>
+                      <td>
+                        <p>55</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex justify-content-around">
+                          <p><i class="bi bi-person-circle"></i></p>
+                          <p>Michae k.</p>
+                        </div>
+                      </td>
+                      <td>
+                        <p>AXT44P5</p>
+                      </td>
+                      <td>
+                        <p>#2257GYYH</p>
+                      </td>
+                      <td>
+                        <p>55</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex justify-content-around">
+                          <p><i class="bi bi-person-circle"></i></p>
+                          <p>Michae k.</p>
+                        </div>
+                      </td>
+                      <td>
+                        <p>AXT44P5</p>
+                      </td>
+                      <td>
+                        <p>#2257GYYH</p>
+                      </td>
+                      <td>
+                        <p>55</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex justify-content-around">
+                          <p><i class="bi bi-person-circle"></i></p>
+                          <p>Michae k.</p>
+                        </div>
+                      </td>
+                      <td>
+                        <p>AXT44P5</p>
+                      </td>
+                      <td>
+                        <p>#2257GYYH</p>
+                      </td>
+                      <td>
+                        <p>55</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex justify-content-around">
+                          <p><i class="bi bi-person-circle"></i></p>
+                          <p>Michae k.</p>
+                        </div>
+                      </td>
+                      <td>
+                        <p>AXT44P5</p>
+                      </td>
+                      <td>
+                        <p>#2257GYYH</p>
+                      </td>
+                      <td>
+                        <p>55</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <script src="/Entak/Portal/assets/js/admin.js"></script>
+  </body>
+</html>
